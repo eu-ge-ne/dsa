@@ -4,13 +4,11 @@ export function insertionSort<T>(arr: T[]): void {
   for (let i = 1; i < l; i += 1) {
     const key = arr[i]!;
 
-    let j;
-    for (j = i - 1; j >= 0; j -= 1) {
-      if (arr[j]! <= key) {
-        break;
-      }
+    let j = i - 1;
 
+    while (j >= 0 && arr[j]! > key) {
       arr[j + 1] = arr[j]!;
+      j -= 1;
     }
 
     arr[j + 1] = key;
