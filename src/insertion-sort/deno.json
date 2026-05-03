@@ -1,0 +1,4 @@
+{
+  "name": "@dsa/insertion-sort",
+  "exports": "./index.ts"
+}
